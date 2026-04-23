@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Charte Graphique · Stellar Imperiums</title>
+  <meta name="description" content="Charte graphique de Stellar Imperiums - Synarion Entertainments - Version 1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================
+       STELLAR IMPERIUMS — CHARTE GRAPHIQUE V1.0
+       Tokens extraits du Design System officiel.
+       ========================================================= */
+
+    :root {
+      /* Typography */
+      --font-display: "Exo 2", system-ui, sans-serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+      /* Abyss (fonds espace) */
+      --abyss-950: #030712;
+      --abyss-900: #060B1A;
+      --abyss-850: #0A1226;
+      --abyss-800: #0E1A33;
+
+      /* Navy (surfaces) */
+      --navy-900: #0A1020;
+      --navy-850: #111A2E;
+      --navy-800: #1A2540;
+      --navy-700: #2A3A5C;
+      --navy-600: #3E5278;
+
+      /* Steel (primaires) */
+      --steel-900: #0B2545;
+      --steel-800: #123560;
+      --steel-700: #1B4B83;
+      --steel-600: #2563A8;
+      --steel-500: #3B82C4;
+      --steel-400: #60A5FA;
+
+      /* Cyan / Holo (accents) */
+      --cyan-600: #0891B2;
+      --cyan-500: #06B6D4;
+      --cyan-400: #22D3EE;
+      --holo-300: #67E8F9;
+      --holo-200: #A5F3FC;
+
+      /* Slate (textes) */
+      --slate-100: #F1F5F9;
+      --slate-200: #E2EAF5;
+      --slate-300: #C1CFE3;
+      --slate-400: #8FA3C2;
+
+      /* Ressources */
+      --res-metal: #8FA3C2;
+      --res-crystal: #22D3EE;
+      --res-energy: #FBBF24;
+
+      /* États */
+      --success: #10B981;
+      --warning: #F59E0B;
+      --error: #F43F5E;
+      --info: #22D3EE;
+
+      /* Spacing (base 4px) */
+      --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px;
+      --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px;
+      --s-12: 48px; --s-16: 64px;
+
+      /* Radius */
+      --r-xs: 4px; --r-sm: 6px; --r-md: 10px;
+      --r-lg: 14px; --r-xl: 20px; --r-full: 9999px;
+
+      /* Shadows */
+      --shadow-card: 0 8px 32px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.04) inset;
+      --shadow-lifted: 0 20px 50px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.05) inset;
+      --shadow-glow-cyan: 0 0 20px rgba(34,211,238,0.45), 0 0 2px rgba(34,211,238,0.85);
+      --shadow-glow-steel: 0 0 22px rgba(37,99,168,0.55), 0 0 2px rgba(59,130,196,0.9);
+
+      /* Gradients */
+      --grad-primary: linear-gradient(135deg, #1B4B83 0%, #06B6D4 100%);
+      --grad-primary-hover: linear-gradient(135deg, #2563A8 0%, #22D3EE 100%);
+      --grad-nebula: radial-gradient(ellipse at 20% 30%, rgba(6,182,212,0.22) 0%, transparent 55%),
+                     radial-gradient(ellipse at 80% 70%, rgba(27,75,131,0.55) 0%, transparent 55%),
+                     linear-gradient(180deg, #030712 0%, #060F24 50%, #030712 100%);
+    }
+
+    /* Reset + base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      background: #1a1a1a;
+      font-family: var(--font-body);
+      color: var(--slate-300);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* =========================================================
+       PAGE (A4) — 210 × 297 mm = 794 × 1123 px @ 96dpi
+       ========================================================= */
+    .page {
+      width: 794px;
+      height: 1123px;
+      background: var(--abyss-950);
+      background-image: var(--grad-nebula);
+      background-size: 100% 100%;
+      margin: 20px auto;
+      position: relative;
+      padding: 72px 64px 72px 64px;
+      color: var(--slate-300);
+      font-size: 12px;
+      line-height: 1.5;
+      overflow: hidden;
+      page-break-after: always;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+
+    /* Page header (logo + brand + page number) */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(143, 163, 194, 0.15);
+      margin-bottom: 32px;
+    }
+    .brand { display: flex; gap: 14px; align-items: center; }
+    .brand-logo {
+      width: 36px; height: 36px;
+      background: var(--grad-primary);
+      border-radius: var(--r-md);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-glow-steel);
+    }
+    .brand-text { display: flex; flex-direction: column; gap: 2px; }
+    .brand-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: var(--slate-100);
+      text-transform: uppercase;
+    }
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--slate-400);
+      text-transform: uppercase;
+    }
+    .page-meta { text-align: right; }
+    .page-meta-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--slate-400);
+      text-transform: uppercase;
+    }
+    .page-meta-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--slate-100);
+      letter-spacing: 1px;
+    }
+
+    /* Page footer */
+    .page-footer {
+      position: absolute;
+      bottom: 32px;
+      left: 64px;
+      right: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid rgba(143, 163, 194, 0.12);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--slate-400);
+      text-transform: uppercase;
+    }
+
+    /* Section title */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--slate-100);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .section-kicker {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--cyan-400);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--slate-100);
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+    .section-subtitle {
+      color: var(--slate-400);
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+
+    /* Block header (with accent bar) */
+    .block-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--slate-200);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-top: 18px;
+    }
+    .block-title::before {
+      content: "";
+      width: 3px;
+      height: 14px;
+      background: var(--cyan-400);
+      border-radius: var(--r-xs);
+      box-shadow: 0 0 8px var(--cyan-400);
+    }
+    .block-title .label { color: var(--slate-400); font-weight: 400; margin-left: 6px; }
+
+    /* Utility */
+    .stack { display: flex; flex-direction: column; gap: var(--s-3); }
+    .row { display: flex; gap: var(--s-3); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--s-3); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-2); }
+
+    /* =========================================================
+       COVER
+       ========================================================= */
+    .page-cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+    }
+    .cover-logo {
+      width: 140px;
+      height: 140px;
+      background: var(--grad-primary);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-glow-steel), var(--shadow-lifted);
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .cover-logo::after {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle, rgba(34,211,238,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .cover-title {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--slate-100);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      background: linear-gradient(180deg, #E2EAF5 0%, #60A5FA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cover-tagline {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--cyan-400);
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+    .cover-type-box {
+      background: rgba(11, 37, 69, 0.6);
+      border: 1px solid var(--steel-700);
+      border-radius: var(--r-lg);
+      padding: 28px 80px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-lifted);
+    }
+    .cover-type-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--slate-100);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .cover-version {
+      color: var(--slate-400);
+      font-size: 14px;
+      margin-bottom: 60px;
+    }
+    .cover-studio-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--slate-400);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .cover-studio-logo {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--navy-800), var(--steel-800));
+      border: 1px solid var(--steel-600);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-card);
+    }
+    .cover-studio-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--slate-200);
+      letter-spacing: 3px;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .cover-studio-sub {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--slate-400);
+      text-transform: uppercase;
+    }
+    .cover-year {
+      margin-top: 40px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--slate-400);
+    }
+
+    /* =========================================================
+       SOMMAIRE
+       ========================================================= */
+    .toc-list { display: flex; flex-direction: column; gap: 2px; margin-top: 12px; }
+    .toc-item {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      gap: 18px;
+      padding: 9px 8px;
+      border-bottom: 1px solid rgba(143, 163, 194, 0.1);
+      align-items: center;
+    }
+    .toc-num {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--cyan-400);
+    }
+    .toc-text .t { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--slate-100); margin-bottom: 1px; }
+    .toc-text .d { font-size: 9.5px; color: var(--slate-400); }
+    .toc-page { font-family: var(--font-mono); font-size: 11px; color: var(--slate-300); }
+
+    /* =========================================================
+       INTRO
+       ========================================================= */
+    .intro-lead {
+      background: rgba(11, 37, 69, 0.4);
+      border-left: 3px solid var(--cyan-400);
+      padding: 10px 14px;
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      margin-bottom: 14px;
+      font-size: 10.5px;
+      line-height: 1.55;
+    }
+    .intro-lead strong { color: var(--slate-100); }
+    .philo-card {
+      background: rgba(17, 26, 46, 0.6);
+      border: 1px solid rgba(143, 163, 194, 0.1);
+      border-radius: var(--r-md);
+      padding: 10px 12px;
+    }
+    .philo-card .pc-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .philo-card .pc-icon {
+      width: 24px; height: 24px;
+      border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .philo-card .pc-title { font-family: var(--font-display); font-size: 11px; font-weight: 600; color: var(--slate-100); }
+    .philo-card .pc-body { font-size: 9.5px; color: var(--slate-400); line-height: 1.45; }
+
+    .principle {
+      background: rgba(17, 26, 46, 0.5);
+      border: 1px solid rgba(143, 163, 194, 0.1);
+      border-radius: var(--r-md);
+      padding: 9px 12px;
+      display: flex;
+      gap: 10px;
+    }
+    .principle-num {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cyan-400);
+      line-height: 1;
+    }
+    .principle-title { font-family: var(--font-display); font-size: 11px; font-weight: 600; color: var(--slate-100); margin-bottom: 1px; }
+    .principle-body { font-size: 9.5px; color: var(--slate-400); line-height: 1.4; }
+
+    .do-dont-card {
+      border-radius: var(--r-md);
+      padding: 10px 12px;
+    }
+    .do-card { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.4); }
+    .dont-card { background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.4); }
+    .dd-title { font-family: var(--font-display); font-weight: 600; font-size: 11px; margin-bottom: 6px; }
+    .do-card .dd-title { color: var(--success); }
+    .dont-card .dd-title { color: var(--error); }
+    .dd-list { list-style: none; font-size: 9.5px; color: var(--slate-300); }
+    .dd-list li { padding: 2px 0 2px 14px; position: relative; }
+    .do-card .dd-list li::before { content: "✓"; position: absolute; left: 0; color: var(--success); }
+    .dont-card .dd-list li::before { content: "✕"; position: absolute; left: 0; color: var(--error); }
+
+    /* =========================================================
+       PALETTE
+       ========================================================= */
+    .palette-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin-bottom: 6px; }
+    .swatch {
+      aspect-ratio: 1.2;
+      border-radius: var(--r-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8px;
+      font-size: 9px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    .swatch .scale {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--slate-100);
+      font-size: 11px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+    .swatch .hex {
+      font-family: var(--font-mono);
+      color: var(--slate-200);
+      font-size: 8px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+    .swatch.on-dark .scale, .swatch.on-dark .hex { color: var(--slate-100); }
+
+    /* =========================================================
+       TYPO
+       ========================================================= */
+    .typo-card {
+      background: rgba(17, 26, 46, 0.6);
+      border: 1px solid rgba(143, 163, 194, 0.12);
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+    }
+    .typo-kicker { font-family: var(--font-mono); font-size: 9px; letter-spacing: 2px; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; }
+    .typo-sample-display { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--cyan-400); margin-bottom: 4px; letter-spacing: -0.5px; line-height: 1; }
+    .typo-sample-body { font-family: var(--font-body); font-size: 18px; color: var(--slate-100); margin-bottom: 4px; }
+    .typo-sample-mono { font-family: var(--font-mono); font-size: 14px; color: var(--slate-100); }
+    .typo-meta { font-family: var(--font-mono); font-size: 9px; color: var(--slate-400); margin-bottom: 6px; letter-spacing: 1px; }
+    .typo-weights { display: flex; gap: 10px; align-items: flex-end; }
+    .typo-weight { text-align: center; }
+    .typo-weight .aa { font-size: 22px; font-weight: 700; color: var(--slate-100); line-height: 1; }
+    .typo-weight .aa.reg { font-weight: 400; }
+    .typo-weight .aa.med { font-weight: 500; }
+    .typo-weight .aa.sem { font-weight: 600; }
+    .typo-weight .label { font-size: 8px; color: var(--slate-400); margin-top: 3px; }
+
+    .grad-box {
+      height: 54px;
+      border-radius: var(--r-md);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      box-shadow: var(--shadow-card);
+    }
+    .grad-box .name { font-family: var(--font-display); font-weight: 600; color: var(--slate-100); font-size: 11px; }
+    .grad-box .var { color: rgba(255,255,255,0.7); font-size: 8px; }
+
+    .state-chip {
+      border-radius: var(--r-md);
+      padding: 10px 14px;
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid;
+      box-shadow: var(--shadow-card);
+    }
+    .state-chip .lbl { font-family: var(--font-body); font-size: 9px; font-weight: 500; color: var(--slate-300); text-transform: none; letter-spacing: 0; margin-top: 4px; }
+    .state-chip .var { font-family: var(--font-mono); font-size: 8px; color: var(--slate-400); text-transform: none; letter-spacing: 0.5px; margin-top: 2px; }
+    .state-success { background: rgba(16,185,129,0.15); border-color: var(--success); color: var(--success); }
+    .state-warning { background: rgba(245,158,11,0.15); border-color: var(--warning); color: var(--warning); }
+    .state-error { background: rgba(244,63,94,0.15); border-color: var(--error); color: var(--error); }
+    .state-info { background: rgba(34,211,238,0.15); border-color: var(--info); color: var(--info); }
+
+    .text-color-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .text-color {
+      background: rgba(17,26,46,0.7);
+      border: 1px solid rgba(143, 163, 194, 0.15);
+      border-radius: var(--r-md);
+      padding: 16px;
+      text-align: center;
+    }
+    .text-color .sample { font-family: var(--font-display); font-weight: 600; font-size: 18px; margin-bottom: 4px; }
+    .text-color .lbl { font-size: 9px; color: var(--slate-400); margin-top: 4px; }
+    .text-color .var { font-family: var(--font-mono); font-size: 8px; color: var(--slate-400); }
+
+    /* =========================================================
+       ICONOGRAPHIE
+       ========================================================= */
+    .icon-cell {
+      aspect-ratio: 1;
+      background: rgba(17,26,46,0.7);
+      border: 1px solid rgba(143,163,194,0.15);
+      border-radius: var(--r-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      gap: 4px;
+    }
+    .icon-cell svg { color: var(--cyan-400); }
+    .icon-cell .name { font-family: var(--font-mono); font-size: 8px; color: var(--slate-400); text-align: center; letter-spacing: 0.5px; }
+    .icon-sizes { display: flex; align-items: flex-end; gap: 20px; padding: 12px; background: rgba(17,26,46,0.6); border: 1px solid rgba(143,163,194,0.12); border-radius: var(--r-md); }
+    .icon-size { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .icon-size svg { color: var(--cyan-400); }
+    .icon-size .sz { font-family: var(--font-mono); font-size: 9px; color: var(--slate-400); }
+
+    /* =========================================================
+       TOKENS
+       ========================================================= */
+    .space-row { display: flex; align-items: flex-end; gap: 12px; padding: 16px; background: rgba(17,26,46,0.6); border-radius: var(--r-md); border: 1px solid rgba(143,163,194,0.12); }
+    .space-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .space-bar { background: linear-gradient(180deg, var(--cyan-400), var(--steel-600)); border-radius: 2px; width: 20px; box-shadow: 0 0 8px rgba(34,211,238,0.4); }
+    .space-var { font-family: var(--font-mono); font-size: 8px; color: var(--slate-400); }
+    .space-val { font-family: var(--font-mono); font-size: 8px; color: var(--slate-300); }
+
+    .radius-cell { aspect-ratio: 1; background: rgba(17,26,46,0.7); border: 1px solid rgba(143,163,194,0.12); padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+    .radius-cell > .shape { background: var(--grad-primary); width: 60%; height: 50%; box-shadow: var(--shadow-glow-steel); }
+    .radius-cell .label { font-family: var(--font-display); font-weight: 600; font-size: 10px; color: var(--slate-100); }
+    .radius-cell .var { font-family: var(--font-mono); font-size: 7px; color: var(--slate-400); text-align: center; }
+
+    .shadow-cell {
+      aspect-ratio: 1.3;
+      background: rgba(17,26,46,0.8);
+      border-radius: var(--r-md);
+      border: 1px solid rgba(143,163,194,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .shadow-cell .box { width: 50%; height: 40%; background: var(--navy-700); border-radius: var(--r-sm); }
+    .shadow-cell .name { font-family: var(--font-display); font-weight: 600; font-size: 10px; color: var(--slate-100); }
+    .shadow-cell .var { font-family: var(--font-mono); font-size: 8px; color: var(--slate-400); }
+
+    .token-card {
+      background: rgba(17,26,46,0.6);
+      border: 1px solid rgba(143,163,194,0.12);
+      border-radius: var(--r-md);
+      padding: 12px;
+    }
+    .token-card .head { font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: var(--slate-400); text-transform: uppercase; margin-bottom: 8px; }
+    .token-card .row { font-size: 10px; display: flex; justify-content: space-between; padding: 3px 0; }
+    .token-card .row .k { color: var(--slate-300); }
+    .token-card .row .v { font-family: var(--font-mono); color: var(--cyan-400); }
+
+    /* =========================================================
+       COMPOSANTS
+       ========================================================= */
+    .btn {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 11px;
+      padding: 8px 14px;
+      border-radius: var(--r-md);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      letter-spacing: 0.3px;
+    }
+    .btn-primary { background: var(--grad-primary); color: white; box-shadow: var(--shadow-glow-steel); }
+    .btn-secondary { background: transparent; color: var(--cyan-400); border: 1px solid var(--cyan-400); }
+    .btn-ghost { background: rgba(34,211,238,0.08); color: var(--slate-200); border: 1px solid transparent; }
+    .btn-danger { background: var(--error); color: white; }
+    .btn-sm { padding: 6px 10px; font-size: 10px; }
+    .btn-md { padding: 8px 14px; font-size: 11px; }
+    .btn-lg { padding: 11px 18px; font-size: 13px; }
+    .btn-disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .cmp-card {
+      background: rgba(17,26,46,0.6);
+      border: 1px solid rgba(143,163,194,0.12);
+      border-radius: var(--r-md);
+      padding: 14px;
+    }
+    .cmp-card-title { font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: var(--slate-400); text-transform: uppercase; margin-bottom: 12px; }
+
+    .input {
+      display: block;
+      width: 100%;
+      background: rgba(10,18,38,0.6);
+      border: 1px solid var(--navy-700);
+      border-radius: var(--r-sm);
+      padding: 7px 10px;
+      color: var(--slate-100);
+      font-family: var(--font-body);
+      font-size: 11px;
+    }
+    .input.focus { border-color: var(--cyan-400); box-shadow: 0 0 0 2px rgba(34,211,238,0.2); }
+    .input.error { border-color: var(--error); }
+    .input.disabled { opacity: 0.5; }
+    .input-label { font-size: 9px; color: var(--slate-400); margin-bottom: 4px; font-family: var(--font-mono); letter-spacing: 1px; text-transform: uppercase; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: var(--r-full);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+    .chip-steel { background: rgba(37,99,168,0.2); color: var(--steel-400); border: 1px solid rgba(37,99,168,0.5); }
+    .chip-cyan { background: rgba(34,211,238,0.15); color: var(--cyan-400); border: 1px solid rgba(34,211,238,0.5); }
+    .chip-energy { background: rgba(251,191,36,0.15); color: var(--res-energy); border: 1px solid rgba(251,191,36,0.5); }
+    .chip-success { background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.5); }
+    .chip-error { background: rgba(244,63,94,0.15); color: var(--error); border: 1px solid rgba(244,63,94,0.5); }
+
+    /* Ressource jauge (composant gameplay) */
+    .resource-card {
+      background: rgba(11,37,69,0.35);
+      border: 1px solid var(--navy-700);
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .resource-icon {
+      width: 36px; height: 36px;
+      border-radius: var(--r-sm);
+      background: rgba(0,0,0,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .resource-meta { flex: 1; }
+    .resource-name { font-family: var(--font-display); font-weight: 600; font-size: 12px; color: var(--slate-100); }
+    .resource-rate { font-family: var(--font-mono); font-size: 9px; color: var(--slate-400); margin-top: 2px; }
+    .resource-bar { height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; margin-top: 6px; }
+    .resource-bar > div { height: 100%; border-radius: 2px; }
+    .resource-value { font-family: var(--font-mono); font-size: 10px; color: var(--slate-300); text-align: right; }
+
+    /* Card En cours (timer) */
+    .timer-card {
+      background: rgba(11,37,69,0.3);
+      border: 1px solid rgba(37,99,168,0.3);
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+      position: relative;
+      box-shadow: var(--shadow-glow-steel);
+    }
+    .timer-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .timer-title { font-family: var(--font-display); font-weight: 600; font-size: 12px; color: var(--slate-100); display: flex; align-items: center; gap: 8px; }
+    .timer-countdown { font-family: var(--font-mono); font-size: 11px; color: var(--cyan-400); font-weight: 600; }
+    .timer-bar { height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; }
+    .timer-bar > div { height: 100%; background: var(--grad-primary); }
+
+    /* Toasts */
+    .toast {
+      border-radius: var(--r-md);
+      padding: 10px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border: 1px solid;
+      font-size: 11px;
+    }
+    .toast-success { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.5); color: var(--slate-100); }
+    .toast-warning { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.5); color: var(--slate-100); }
+    .toast-error { background: rgba(244,63,94,0.12); border-color: rgba(244,63,94,0.5); color: var(--slate-100); }
+    .toast-info { background: rgba(34,211,238,0.12); border-color: rgba(34,211,238,0.5); color: var(--slate-100); }
+    .toast .dot { width: 6px; height: 6px; border-radius: 50%; }
+    .toast-success .dot { background: var(--success); box-shadow: 0 0 8px var(--success); }
+    .toast-warning .dot { background: var(--warning); box-shadow: 0 0 8px var(--warning); }
+    .toast-error .dot { background: var(--error); box-shadow: 0 0 8px var(--error); }
+    .toast-info .dot { background: var(--info); box-shadow: 0 0 8px var(--info); }
+
+    /* =========================================================
+       ACCESSIBILITÉ
+       ========================================================= */
+    .contrast-card {
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .contrast-ratio { font-family: var(--font-mono); font-size: 10px; padding: 2px 8px; border-radius: var(--r-sm); background: var(--success); color: white; }
+    .contrast-meta { font-family: var(--font-mono); font-size: 8px; color: var(--slate-400); margin-top: 4px; font-weight: 400; }
+    .a11y-check-list { list-style: none; font-size: 10px; padding-left: 0; }
+    .a11y-check-list li { padding: 4px 0 4px 18px; position: relative; color: var(--slate-300); }
+    .a11y-check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--success); font-weight: bold; }
+    .focus-demo {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--grad-primary);
+      color: white;
+      border-radius: var(--r-md);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 11px;
+      outline: 2px solid var(--cyan-400);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(34,211,238,0.2);
+    }
+    .method-box {
+      background: rgba(11,37,69,0.4);
+      border-left: 3px solid var(--cyan-400);
+      padding: 10px 14px;
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      font-size: 10px;
+      color: var(--slate-300);
+      margin-top: 12px;
+    }
+    .method-box strong { color: var(--slate-100); }
+
+    /* =========================================================
+       MAQUETTES (wireframes + mockups)
+       ========================================================= */
+    .maquette-frame {
+      background: #f7f7f5;
+      border-radius: var(--r-md);
+      padding: 8px;
+      box-shadow: var(--shadow-lifted);
+      margin-top: 14px;
+    }
+    .maquette-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--r-sm);
+    }
+    .maquette-frame.mockup { background: var(--abyss-950); border: 1px solid var(--navy-700); }
+
+    .maquette-caption {
+      background: rgba(17,26,46,0.4);
+      border-left: 3px solid var(--cyan-400);
+      padding: 10px 14px;
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      font-size: 10px;
+      line-height: 1.6;
+      color: var(--slate-300);
+      margin-top: 14px;
+    }
+    .maquette-caption strong { color: var(--slate-100); font-family: var(--font-display); font-weight: 600; }
+
+    .maquette-section-title {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .maquette-section-title .tag {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--cyan-400);
+      padding: 2px 8px;
+      border: 1px solid rgba(34,211,238,0.4);
+      border-radius: var(--r-full);
+      text-transform: uppercase;
+    }
+
+    /* Maquette mobile : centrer l'image (elle est étroite) */
+    .maquette-frame.mobile img { max-height: 620px; width: auto; max-width: 40%; margin: 0 auto; display: block; }
+
+    /* =========================================================
+       PRINT
+       ========================================================= */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+      html, body { background: #000; }
+      .page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========================================================= -->
+<!-- PAGE 01 — COVER                                           -->
+<!-- ========================================================= -->
+<section class="page page-cover">
+  <div class="cover-logo">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 10 L50 35 L72 38 L55 54 L60 75 L40 63 L20 75 L25 54 L8 38 L30 35 Z" fill="white" opacity="0.95"/>
+      <circle cx="40" cy="44" r="4" fill="#22D3EE"/>
+    </svg>
+  </div>
+  <div class="cover-title">Stellar Imperiums</div>
+  <div class="cover-tagline">MMO · CONQUÊTE SPATIALE</div>
+
+  <div class="cover-type-box">
+    <div class="cover-type-title">Charte Graphique</div>
+  </div>
+  <div class="cover-version">Version 1.0</div>
+
+  <div class="cover-studio-label">Développé par</div>
+  <div class="cover-studio-logo">
+    <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="14" stroke="#22D3EE" stroke-width="2"/>
+      <circle cx="20" cy="20" r="6" fill="#22D3EE"/>
+      <circle cx="32" cy="12" r="2" fill="#A5F3FC"/>
+    </svg>
+  </div>
+  <div class="cover-studio-name">Synarion Entertainments</div>
+  <div class="cover-studio-sub">Independent Game Studio</div>
+
+  <div class="cover-year">2026</div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 02 — SOMMAIRE                                        -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Stellar Imperiums</div>
+        <div class="brand-sub">Charte graphique v1.0</div>
+      </div>
+    </div>
+    <div class="page-meta">
+      <div class="page-meta-label">Charte Graphique</div>
+      <div class="page-meta-num">02</div>
+    </div>
+  </div>
+
+  <span class="section-kicker">TABLE DES MATIÈRES</span>
+  <h1 class="section-title">Sommaire</h1>
+  <p class="section-subtitle">11 sections, 21 pages</p>
+
+  <div class="toc-list">
+    <div class="toc-item"><span class="toc-num">01</span><div class="toc-text"><div class="t">Introduction</div><div class="d">Philosophie, principes directeurs et bonnes pratiques</div></div><span class="toc-page">3</span></div>
+    <div class="toc-item"><span class="toc-num">02</span><div class="toc-text"><div class="t">Palette de couleurs</div><div class="d">Steel, Cyan, Abyss, Navy</div></div><span class="toc-page">4</span></div>
+    <div class="toc-item"><span class="toc-num">03</span><div class="toc-text"><div class="t">Couleurs & Typographie</div><div class="d">Textes, états sémantiques, gradients, polices</div></div><span class="toc-page">5</span></div>
+    <div class="toc-item"><span class="toc-num">04</span><div class="toc-text"><div class="t">Iconographie</div><div class="d">Lucide Icons UI, icônes custom bâtiments & technologies</div></div><span class="toc-page">6</span></div>
+    <div class="toc-item"><span class="toc-num">05</span><div class="toc-text"><div class="t">Tokens & Espacements</div><div class="d">Spacing, radius, shadows et autres tokens</div></div><span class="toc-page">7</span></div>
+    <div class="toc-item"><span class="toc-num">06</span><div class="toc-text"><div class="t">Composants de base</div><div class="d">Boutons, inputs, chips, badges</div></div><span class="toc-page">8</span></div>
+    <div class="toc-item"><span class="toc-num">07</span><div class="toc-text"><div class="t">Composants spécifiques (jeu)</div><div class="d">Jauges ressources, card timer, toasts</div></div><span class="toc-page">9</span></div>
+    <div class="toc-item"><span class="toc-num">08</span><div class="toc-text"><div class="t">Accessibilité</div><div class="d">Conformité RGAA, contrastes WCAG, focus et navigation</div></div><span class="toc-page">10</span></div>
+    <div class="toc-item"><span class="toc-num">09</span><div class="toc-text"><div class="t">Wireframes Desktop</div><div class="d">Accueil, Tableau de bord, Bâtiments</div></div><span class="toc-page">11-13</span></div>
+    <div class="toc-item"><span class="toc-num">10</span><div class="toc-text"><div class="t">Wireframes Mobile</div><div class="d">Accueil, Tableau de bord, Bâtiments</div></div><span class="toc-page">14-16</span></div>
+    <div class="toc-item"><span class="toc-num">11</span><div class="toc-text"><div class="t">Mockups haute fidélité</div><div class="d">Desktop + Mobile de 3 écrans clés</div></div><span class="toc-page">17-21</span></div>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 02 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 03 — INTRODUCTION                                    -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">03</div></div>
+  </div>
+
+  <span class="section-kicker">01 — FONDATIONS</span>
+  <h1 class="section-title">Introduction</h1>
+  <p class="section-subtitle">Philosophie et principes de design</p>
+
+  <div class="block-title">À propos de Stellar Imperiums</div>
+  <div class="intro-lead">
+    <strong>Stellar Imperiums</strong> est un jeu de gestion de colonie spatiale accessible depuis un navigateur, développé par <strong>Synarion Entertainments</strong>. Chaque joueur administre une planète, construit des bâtiments destinés à produire trois ressources (métal, cristal, énergie) et lance des recherches technologiques afin d'améliorer sa production. Un classement public permet de comparer sa progression à celle des autres joueurs. La présente charte définit l'identité visuelle de l'application et garantit la cohérence, la lisibilité et l'accessibilité de l'interface sur l'ensemble des écrans.
+  </div>
+
+  <div class="block-title">Philosophie des couleurs</div>
+  <div class="grid-2">
+    <div class="philo-card">
+      <div class="pc-head">
+        <div class="pc-icon" style="background:var(--grad-primary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v8m0 12v-8m-10 0h8m12 0h-8"/></svg></div>
+        <div class="pc-title">Steel & Cyan</div>
+      </div>
+      <div class="pc-body">Couleur de signature évoquant la précision, la technologie et l'espace profond. Réservée aux éléments d'action et aux accents porteurs d'information.</div>
+    </div>
+    <div class="philo-card">
+      <div class="pc-head">
+        <div class="pc-icon" style="background:var(--abyss-900); border: 1px solid var(--navy-700);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="pc-title">Fonds Abyss</div>
+      </div>
+      <div class="pc-body">Nuances sombres favorisant la lisibilité sur des sessions prolongées et réduisant la fatigue visuelle. Fond par défaut de l'ensemble des écrans authentifiés.</div>
+    </div>
+    <div class="philo-card">
+      <div class="pc-head">
+        <div class="pc-icon" style="background:linear-gradient(135deg, #8FA3C2, #22D3EE, #FBBF24);"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><circle cx="6" cy="12" r="3"/><circle cx="12" cy="12" r="3"/><circle cx="18" cy="12" r="3"/></svg></div>
+        <div class="pc-title">Codification des ressources</div>
+      </div>
+      <div class="pc-body">Métal argenté, cristal cyan, énergie ambre. Une palette dédiée assure l'identification immédiate de chaque ressource dans les interfaces de jeu.</div>
+    </div>
+    <div class="philo-card">
+      <div class="pc-head">
+        <div class="pc-icon" style="background:var(--error);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 9v3m0 4h.01M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"/></svg></div>
+        <div class="pc-title">Alertes rouges</div>
+      </div>
+      <div class="pc-body">Réservé aux erreurs, aux alertes de ressources insuffisantes et aux actions destructives. Utilisé avec parcimonie afin de préserver son pouvoir d'alerte.</div>
+    </div>
+  </div>
+
+  <div class="block-title">Principes directeurs</div>
+  <div class="grid-2">
+    <div class="principle"><div class="principle-num">01</div><div><div class="principle-title">Cohérence</div><div class="principle-body">S'appuyer systématiquement sur les tokens définis. Aucune couleur ni espacement improvisés.</div></div></div>
+    <div class="principle"><div class="principle-num">02</div><div><div class="principle-title">Immersion</div><div class="principle-body">Chaque élément d'interface contribue à renforcer l'univers de science-fiction du jeu.</div></div></div>
+    <div class="principle"><div class="principle-num">03</div><div><div class="principle-title">Accessibilité</div><div class="principle-body">Conformité WCAG 2.1 niveau AA et RGAA 4.1. L'interface doit demeurer utilisable par tous.</div></div></div>
+    <div class="principle"><div class="principle-num">04</div><div><div class="principle-title">Hiérarchie</div><div class="principle-body">Le cyan est réservé aux actions primaires. Les autres éléments conservent une présence discrète.</div></div></div>
+  </div>
+
+  <div class="block-title">Bonnes pratiques</div>
+  <div class="grid-2">
+    <div class="do-dont-card do-card">
+      <div class="dd-title">✓ À faire</div>
+      <ul class="dd-list">
+        <li>Réserver le cyan aux actions primaires</li>
+        <li>Maintenir un fond Abyss cohérent sur toutes les vues</li>
+        <li>Respecter l'échelle d'espacements multiple de 4px</li>
+        <li>Valider les ratios de contraste avant mise en production</li>
+      </ul>
+    </div>
+    <div class="do-dont-card dont-card">
+      <div class="dd-title">✕ À éviter</div>
+      <ul class="dd-list">
+        <li>Associer plusieurs teintes vives dans un même écran</li>
+        <li>Employer du texte sombre sur fond clair</li>
+        <li>Introduire des valeurs d'espacement arbitraires</li>
+        <li>Multiplier les effets lumineux sur une même vue</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 03 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 04 — PALETTE DE COULEURS                             -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">04</div></div>
+  </div>
+
+  <span class="section-kicker">02 — FONDATIONS</span>
+  <h1 class="section-title">Palette de couleurs</h1>
+  <p class="section-subtitle">Système de couleurs Steel &amp; Cyan pour l'univers Stellar Imperiums</p>
+
+  <div class="block-title">STEEL <span class="label">— Couleur primaire</span></div>
+  <div class="palette-row">
+    <div class="swatch on-dark" style="background:#0B2545"><span class="scale">900</span><span class="hex">#0B2545</span></div>
+    <div class="swatch on-dark" style="background:#123560"><span class="scale">800</span><span class="hex">#123560</span></div>
+    <div class="swatch on-dark" style="background:#1B4B83"><span class="scale">700</span><span class="hex">#1B4B83</span></div>
+    <div class="swatch on-dark" style="background:#2563A8"><span class="scale">600</span><span class="hex">#2563A8</span></div>
+    <div class="swatch on-dark" style="background:#3B82C4"><span class="scale">500</span><span class="hex">#3B82C4</span></div>
+    <div class="swatch on-dark" style="background:#60A5FA"><span class="scale">400</span><span class="hex">#60A5FA</span></div>
+  </div>
+
+  <div class="block-title">CYAN / HOLO <span class="label">— Accents & info</span></div>
+  <div class="palette-row">
+    <div class="swatch on-dark" style="background:#0891B2"><span class="scale">600</span><span class="hex">#0891B2</span></div>
+    <div class="swatch on-dark" style="background:#06B6D4"><span class="scale">500</span><span class="hex">#06B6D4</span></div>
+    <div class="swatch on-dark" style="background:#22D3EE"><span class="scale">400</span><span class="hex">#22D3EE</span></div>
+    <div class="swatch" style="background:#67E8F9"><span class="scale" style="color:#0B2545">300</span><span class="hex" style="color:#0B2545">#67E8F9</span></div>
+    <div class="swatch" style="background:#A5F3FC"><span class="scale" style="color:#0B2545">200</span><span class="hex" style="color:#0B2545">#A5F3FC</span></div>
+    <div class="swatch" style="background:transparent;border:1px dashed rgba(143,163,194,0.3);"><span class="scale" style="color:var(--slate-400); font-size:8px;">—</span></div>
+  </div>
+
+  <div class="block-title">ABYSS <span class="label">— Fonds espace</span></div>
+  <div class="palette-row">
+    <div class="swatch on-dark" style="background:#030712"><span class="scale">950</span><span class="hex">#030712</span></div>
+    <div class="swatch on-dark" style="background:#060B1A"><span class="scale">900</span><span class="hex">#060B1A</span></div>
+    <div class="swatch on-dark" style="background:#0A1226"><span class="scale">850</span><span class="hex">#0A1226</span></div>
+    <div class="swatch on-dark" style="background:#0E1A33"><span class="scale">800</span><span class="hex">#0E1A33</span></div>
+    <div class="swatch" style="background:transparent;border:1px dashed rgba(143,163,194,0.3);"><span class="scale" style="color:var(--slate-400); font-size:8px;">—</span></div>
+    <div class="swatch" style="background:transparent;border:1px dashed rgba(143,163,194,0.3);"><span class="scale" style="color:var(--slate-400); font-size:8px;">—</span></div>
+  </div>
+
+  <div class="block-title">NAVY <span class="label">— Surfaces & séparateurs</span></div>
+  <div class="palette-row">
+    <div class="swatch on-dark" style="background:#0A1020"><span class="scale">900</span><span class="hex">#0A1020</span></div>
+    <div class="swatch on-dark" style="background:#111A2E"><span class="scale">850</span><span class="hex">#111A2E</span></div>
+    <div class="swatch on-dark" style="background:#1A2540"><span class="scale">800</span><span class="hex">#1A2540</span></div>
+    <div class="swatch on-dark" style="background:#2A3A5C"><span class="scale">700</span><span class="hex">#2A3A5C</span></div>
+    <div class="swatch on-dark" style="background:#3E5278"><span class="scale">600</span><span class="hex">#3E5278</span></div>
+    <div class="swatch" style="background:transparent;border:1px dashed rgba(143,163,194,0.3);"><span class="scale" style="color:var(--slate-400); font-size:8px;">—</span></div>
+  </div>
+
+  <div class="block-title">RESSOURCES <span class="label">— Codification gameplay</span></div>
+  <div class="grid-3" style="margin-top: 8px;">
+    <div class="swatch on-dark" style="background:#8FA3C2; aspect-ratio: 2.5;"><span class="scale">MÉTAL</span><span class="hex">#8FA3C2</span></div>
+    <div class="swatch on-dark" style="background:#22D3EE; aspect-ratio: 2.5;"><span class="scale" style="color:#0B2545;">CRISTAL</span><span class="hex" style="color:#0B2545;">#22D3EE</span></div>
+    <div class="swatch on-dark" style="background:#FBBF24; aspect-ratio: 2.5;"><span class="scale" style="color:#0B2545;">ÉNERGIE</span><span class="hex" style="color:#0B2545;">#FBBF24</span></div>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 04 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 05 — COULEURS & TYPOGRAPHIE                          -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">05</div></div>
+  </div>
+
+  <span class="section-kicker">03 — FONDATIONS</span>
+  <h1 class="section-title">Couleurs &amp; Typographie</h1>
+  <p class="section-subtitle">Couleurs fonctionnelles, gradients et système typographique</p>
+
+  <div class="block-title">COULEURS DE TEXTE</div>
+  <div class="text-color-row">
+    <div class="text-color"><div class="sample" style="color:var(--slate-100)">Aa</div><div class="lbl">Primary</div><div class="var">--slate-100</div></div>
+    <div class="text-color"><div class="sample" style="color:var(--slate-200)">Aa</div><div class="lbl">Secondary</div><div class="var">--slate-200</div></div>
+    <div class="text-color"><div class="sample" style="color:var(--slate-300)">Aa</div><div class="lbl">Body</div><div class="var">--slate-300</div></div>
+    <div class="text-color"><div class="sample" style="color:var(--slate-400)">Aa</div><div class="lbl">Muted</div><div class="var">--slate-400</div></div>
+  </div>
+
+  <div class="block-title">ÉTATS SÉMANTIQUES <span class="label">— Feedback utilisateur</span></div>
+  <div class="grid-4">
+    <div class="state-chip state-success">Success<div class="lbl">Construction terminée</div><div class="var">--success</div></div>
+    <div class="state-chip state-warning">Warning<div class="lbl">Stockage presque plein</div><div class="var">--warning</div></div>
+    <div class="state-chip state-error">Error<div class="lbl">Ressources insuffisantes</div><div class="var">--error</div></div>
+    <div class="state-chip state-info">Info<div class="lbl">Recherche disponible</div><div class="var">--info</div></div>
+  </div>
+
+  <div class="block-title">GRADIENTS <span class="label">— Accents visuels signature</span></div>
+  <div class="grid-3">
+    <div class="grad-box" style="background: var(--grad-primary);"><div class="name">Primary</div><div class="var">--grad-primary</div></div>
+    <div class="grad-box" style="background: var(--grad-primary-hover);"><div class="name">Primary Hover</div><div class="var">--grad-primary-hover</div></div>
+    <div class="grad-box" style="background: var(--grad-nebula); border: 1px solid var(--navy-700);"><div class="name">Nebula</div><div class="var">--grad-nebula</div></div>
+  </div>
+
+  <div class="block-title">TYPOGRAPHIE <span class="label">— Système de polices</span></div>
+  <div class="grid-2">
+    <div class="typo-card">
+      <div class="typo-kicker">Police d'affichage</div>
+      <div class="typo-sample-display">Exo 2</div>
+      <div class="typo-meta">Titres h1-h4, CTA, éléments de marque — <span style="color:var(--cyan-400);">--font-display</span></div>
+      <div class="typo-weights">
+        <div class="typo-weight"><div class="aa reg">Aa</div><div class="label">400 Regular</div></div>
+        <div class="typo-weight"><div class="aa med">Aa</div><div class="label">500 Medium</div></div>
+        <div class="typo-weight"><div class="aa sem">Aa</div><div class="label">600 SemiBold</div></div>
+        <div class="typo-weight"><div class="aa">Aa</div><div class="label">700 Bold</div></div>
+      </div>
+    </div>
+    <div class="typo-card">
+      <div class="typo-kicker">Police de corps</div>
+      <div class="typo-sample-body" style="font-family:var(--font-body); font-size:32px; font-weight:600; color:var(--slate-100);">Inter</div>
+      <div class="typo-meta">Paragraphes, interface, formulaires — <span style="color:var(--cyan-400);">--font-body</span></div>
+      <div class="typo-weights">
+        <div class="typo-weight"><div class="aa reg" style="font-family:var(--font-body)">Aa</div><div class="label">400 Regular</div></div>
+        <div class="typo-weight"><div class="aa med" style="font-family:var(--font-body)">Aa</div><div class="label">500 Medium</div></div>
+        <div class="typo-weight"><div class="aa sem" style="font-family:var(--font-body)">Aa</div><div class="label">600 SemiBold</div></div>
+        <div class="typo-weight"><div class="aa" style="font-family:var(--font-body)">Aa</div><div class="label">700 Bold</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="typo-card" style="margin-top: 12px;">
+    <div class="typo-kicker">Police monospace</div>
+    <div class="typo-sample-mono" style="font-size: 24px; color: var(--cyan-400);">JetBrains Mono</div>
+    <div class="typo-meta">Valeurs numériques (ressources, timers, coordonnées), tokens, code — <span style="color:var(--cyan-400);">--font-mono</span></div>
+    <div style="font-family:var(--font-mono); color:var(--slate-300); font-size:11px; margin-top:6px;">42 180 / 150k · 00:42:18 · COORD [4:127:8]</div>
+  </div>
+
+  <div class="intro-lead" style="margin-top: 10px;">
+    <strong>Règles d'usage :</strong> Exo 2 est réservée aux titres H1-H4, appels à l'action et éléments d'identité. Inter couvre l'ensemble de l'interface (paragraphes, libellés, formulaires). JetBrains Mono est employée pour les valeurs numériques, ressources, compteurs et coordonnées.
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 05 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 06 — ICONOGRAPHIE                                    -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">06</div></div>
+  </div>
+
+  <span class="section-kicker">04 — FONDATIONS</span>
+  <h1 class="section-title">Iconographie</h1>
+  <p class="section-subtitle">Système d'icônes pour l'univers Stellar Imperiums</p>
+
+  <div class="grid-2" style="gap: 20px;">
+    <div class="typo-card">
+      <div class="typo-kicker">Bibliothèque UI</div>
+      <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/></svg>
+        <div>
+          <div style="font-family:var(--font-display); font-weight:600; color:var(--slate-100); font-size:13px;">Lucide Icons</div>
+          <div style="font-family:var(--font-mono); font-size:9px; color:var(--slate-400); margin-top:2px;">Licence : ISC · v0.400+</div>
+        </div>
+      </div>
+    </div>
+    <div class="typo-card">
+      <div class="typo-kicker">Custom SVG</div>
+      <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div>
+          <div style="font-family:var(--font-display); font-weight:600; color:var(--slate-100); font-size:13px;">Bâtiments & technos</div>
+          <div style="font-family:var(--font-mono); font-size:9px; color:var(--slate-400); margin-top:2px;">Synarion Entertainments</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block-title">TAILLES <span class="label">— Échelle d'utilisation</span></div>
+  <div class="icon-sizes">
+    <div class="icon-size"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v7c0 5 3.5 9 9 10 5.5-1 9-5 9-10V7l-9-5z"/></svg><div class="sz">16px</div></div>
+    <div class="icon-size"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v7c0 5 3.5 9 9 10 5.5-1 9-5 9-10V7l-9-5z"/></svg><div class="sz">24px</div></div>
+    <div class="icon-size"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v7c0 5 3.5 9 9 10 5.5-1 9-5 9-10V7l-9-5z"/></svg><div class="sz">32px</div></div>
+    <div class="icon-size"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v7c0 5 3.5 9 9 10 5.5-1 9-5 9-10V7l-9-5z"/></svg><div class="sz">48px</div></div>
+  </div>
+
+  <div class="block-title">BÂTIMENTS <span class="label">— Icônes gameplay (custom SVG)</span></div>
+  <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:8px;">
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 20h16M6 20V10l6-4 6 4v10M10 20v-6h4v6"/></svg><div class="name">mine-metal</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l6 9-6 9-6-9 6-9z"/><path d="M9 12h6M12 3v18"/></svg><div class="name">extracteur</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13 2L3 14h7v8l10-12h-7V2z"/></svg><div class="name">centrale</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18M8 7V4h8v3"/></svg><div class="name">entrepot</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v10H4V10a8 8 0 0 1 8-8z"/><path d="M12 6v10M8 16h8"/></svg><div class="name">silo-energie</div></div>
+  </div>
+
+  <div class="block-title">TECHNOLOGIES <span class="label">— Icônes recherche (custom SVG)</span></div>
+  <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:8px;">
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/></svg><div class="name">metallurgie</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l5 5v8l-5 5-5-5V8l5-5z"/><path d="M7 8l5 5 5-5"/></svg><div class="name">cristallo</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg><div class="name">fusion</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg><div class="name">stockage</div></div>
+    <div class="icon-cell"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M9 2L4 8l8 8 8-8-5-6H9z"/><path d="M4 14l8 8M20 14l-8 8"/></svg><div class="name">navigation</div></div>
+  </div>
+
+  <div class="block-title">UI / NAVIGATION <span class="label">— Sélection Lucide</span></div>
+  <div style="display:grid; grid-template-columns: repeat(8, 1fr); gap:6px;">
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><div class="name">home</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg><div class="name">user</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><div class="name">search</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><div class="name">star</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div class="name">clock</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13 21a2 2 0 0 1-4 0"/></svg><div class="name">bell</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg><div class="name">menu</div></div>
+    <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><div class="name">settings</div></div>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 06 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 07 — TOKENS & ESPACEMENTS                            -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">07</div></div>
+  </div>
+
+  <span class="section-kicker">05 — FONDATIONS</span>
+  <h1 class="section-title">Tokens &amp; Espacements</h1>
+  <p class="section-subtitle">Système de spacing, rayons, ombres et autres tokens</p>
+
+  <div class="block-title">ÉCHELLE D'ESPACEMENTS <span class="label">— Base 4px</span></div>
+  <div class="space-row">
+    <div class="space-item"><div class="space-bar" style="height:4px"></div><div class="space-var">--s-1</div><div class="space-val">4px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:8px"></div><div class="space-var">--s-2</div><div class="space-val">8px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:12px"></div><div class="space-var">--s-3</div><div class="space-val">12px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:16px"></div><div class="space-var">--s-4</div><div class="space-val">16px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:20px"></div><div class="space-var">--s-5</div><div class="space-val">20px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:24px"></div><div class="space-var">--s-6</div><div class="space-val">24px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:32px"></div><div class="space-var">--s-8</div><div class="space-val">32px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:40px"></div><div class="space-var">--s-10</div><div class="space-val">40px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:48px"></div><div class="space-var">--s-12</div><div class="space-val">48px</div></div>
+    <div class="space-item"><div class="space-bar" style="height:64px"></div><div class="space-var">--s-16</div><div class="space-val">64px</div></div>
+  </div>
+
+  <div class="block-title">BORDER RADIUS</div>
+  <div style="display:grid; grid-template-columns: repeat(6, 1fr); gap:6px;">
+    <div class="radius-cell"><div class="shape" style="border-radius:0"></div><div class="label">None</div><div class="var">0</div></div>
+    <div class="radius-cell"><div class="shape" style="border-radius:4px"></div><div class="label">XS</div><div class="var">--r-xs · 4px</div></div>
+    <div class="radius-cell"><div class="shape" style="border-radius:6px"></div><div class="label">SM</div><div class="var">--r-sm · 6px</div></div>
+    <div class="radius-cell"><div class="shape" style="border-radius:10px"></div><div class="label">MD</div><div class="var">--r-md · 10px</div></div>
+    <div class="radius-cell"><div class="shape" style="border-radius:14px"></div><div class="label">LG</div><div class="var">--r-lg · 14px</div></div>
+    <div class="radius-cell"><div class="shape" style="border-radius:9999px"></div><div class="label">FULL</div><div class="var">--r-full</div></div>
+  </div>
+
+  <div class="block-title">OMBRES <span class="label">— Profondeur & lumière</span></div>
+  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:8px;">
+    <div class="shadow-cell" style="background:rgba(10,18,38,0.4);"><div class="box" style="box-shadow: var(--shadow-card);"></div><div class="name">Card</div><div class="var">--shadow-card</div></div>
+    <div class="shadow-cell" style="background:rgba(10,18,38,0.4);"><div class="box" style="box-shadow: var(--shadow-lifted);"></div><div class="name">Lifted</div><div class="var">--shadow-lifted</div></div>
+    <div class="shadow-cell" style="background:rgba(10,18,38,0.4);"><div class="box" style="box-shadow: var(--shadow-glow-cyan);"></div><div class="name">Glow Cyan</div><div class="var">--shadow-glow-cyan</div></div>
+    <div class="shadow-cell" style="background:rgba(10,18,38,0.4);"><div class="box" style="box-shadow: var(--shadow-glow-steel);"></div><div class="name">Glow Steel</div><div class="var">--shadow-glow-steel</div></div>
+  </div>
+
+  <div class="block-title">AUTRES TOKENS</div>
+  <div class="grid-4">
+    <div class="token-card">
+      <div class="head">Transitions</div>
+      <div class="row"><span class="k">Fast</span><span class="v">150ms</span></div>
+      <div class="row"><span class="k">Normal</span><span class="v">200ms</span></div>
+      <div class="row"><span class="k">Slow</span><span class="v">300ms</span></div>
+    </div>
+    <div class="token-card">
+      <div class="head">Z-index</div>
+      <div class="row"><span class="k">Dropdown</span><span class="v">10</span></div>
+      <div class="row"><span class="k">Modal</span><span class="v">50</span></div>
+      <div class="row"><span class="k">Toast</span><span class="v">100</span></div>
+    </div>
+    <div class="token-card">
+      <div class="head">Breakpoints</div>
+      <div class="row"><span class="k">Mobile</span><span class="v">375px</span></div>
+      <div class="row"><span class="k">Tablet</span><span class="v">768px</span></div>
+      <div class="row"><span class="k">Desktop</span><span class="v">1440px</span></div>
+    </div>
+    <div class="token-card">
+      <div class="head">Line height</div>
+      <div class="row"><span class="k">Tight</span><span class="v">1.25</span></div>
+      <div class="row"><span class="k">Normal</span><span class="v">1.5</span></div>
+      <div class="row"><span class="k">Relaxed</span><span class="v">1.625</span></div>
+    </div>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 07 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 08 — COMPOSANTS DE BASE                              -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">08</div></div>
+  </div>
+
+  <span class="section-kicker">06 — COMPOSANTS</span>
+  <h1 class="section-title">Composants de base</h1>
+  <p class="section-subtitle">Éléments d'interface réutilisables</p>
+
+  <div class="grid-2">
+    <div class="cmp-card">
+      <div class="cmp-card-title">Boutons — Variantes</div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-danger">Danger</button>
+      </div>
+      <div class="cmp-card-title" style="margin-top:14px;">Tailles</div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary btn-md">Medium</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+      </div>
+      <div class="cmp-card-title" style="margin-top:14px;">États</div>
+      <div style="display:flex; gap:8px;">
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary" style="background:var(--grad-primary-hover);">Hover</button>
+        <button class="btn btn-primary btn-disabled">Disabled</button>
+      </div>
+    </div>
+
+    <div class="cmp-card">
+      <div class="cmp-card-title">Champs de formulaire</div>
+      <div class="stack">
+        <div>
+          <div class="input-label">E-mail</div>
+          <input class="input" value="commandant@galaxie.io" readonly>
+        </div>
+        <div>
+          <div class="input-label">Mot de passe — focus</div>
+          <input class="input focus" value="••••••••" readonly>
+        </div>
+        <div>
+          <div class="input-label" style="color:var(--error)">Pseudo — erreur</div>
+          <input class="input error" value="a" readonly>
+          <div style="color:var(--error); font-size:9px; margin-top:4px;">Minimum 3 caractères requis.</div>
+        </div>
+        <div>
+          <div class="input-label">Disabled</div>
+          <input class="input disabled" value="Verrouillé" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cmp-card" style="margin-top: 12px;">
+    <div class="cmp-card-title">Chips &amp; badges</div>
+    <div style="display:flex; flex-wrap:wrap; gap:6px; align-items:center;">
+      <span class="chip chip-steel">NIV. 4</span>
+      <span class="chip chip-cyan">En cours</span>
+      <span class="chip chip-energy">Énergie requise</span>
+      <span class="chip chip-success">Terminé</span>
+      <span class="chip chip-error">Ressources insuffisantes</span>
+      <span class="chip chip-steel">Planète · VEGA-IV</span>
+      <span class="chip chip-cyan">#5 mondial</span>
+    </div>
+  </div>
+
+  <div class="cmp-card" style="margin-top: 12px;">
+    <div class="cmp-card-title">Cards standard</div>
+    <div class="grid-2">
+      <div style="background:rgba(11,37,69,0.35); border:1px solid var(--navy-700); border-radius:var(--r-md); padding:14px;">
+        <div style="font-family:var(--font-display); font-weight:600; font-size:12px; color:var(--slate-100); margin-bottom:4px;">Titre de la card</div>
+        <div style="font-size:10px; color:var(--slate-400); line-height:1.5;">Description courte expliquant le contenu ou l'action proposée dans cette card.</div>
+      </div>
+      <div style="background:rgba(11,37,69,0.35); border:1px solid var(--cyan-500); border-radius:var(--r-md); padding:14px; box-shadow: var(--shadow-glow-cyan);">
+        <div style="font-family:var(--font-display); font-weight:600; font-size:12px; color:var(--cyan-400); margin-bottom:4px;">Card active (hover)</div>
+        <div style="font-size:10px; color:var(--slate-300); line-height:1.5;">État de survol avec glow cyan. Utilisé pour indiquer l'interactivité.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-lead" style="margin-top: 14px;">
+    <strong>Utilisation :</strong> Ces composants sont les briques de base de l'interface. Ils respectent les tokens définis (couleurs, espacements, rayons) et doivent être utilisés de manière cohérente dans toute l'application.
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 08 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 09 — COMPOSANTS SPÉCIFIQUES (JEU)                    -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">09</div></div>
+  </div>
+
+  <span class="section-kicker">07 — COMPOSANTS</span>
+  <h1 class="section-title">Composants spécifiques</h1>
+  <p class="section-subtitle">Éléments d'interface propres aux mécaniques de jeu</p>
+
+  <div class="block-title">JAUGES DE RESSOURCES</div>
+  <div class="stack">
+    <div class="resource-card">
+      <div class="resource-icon" style="background: rgba(143,163,194,0.15);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FA3C2" stroke-width="2"><path d="M6 3h12l3 7-9 11L3 10z"/><path d="M12 22V8M3 10h18"/></svg>
+      </div>
+      <div class="resource-meta">
+        <div class="resource-name" style="color:#8FA3C2;">Métal</div>
+        <div class="resource-rate">Production : +2 400/h · Capacité 150 000</div>
+        <div class="resource-bar"><div style="width: 28%; background: #8FA3C2;"></div></div>
+      </div>
+      <div class="resource-value">42 180 / 150 000</div>
+    </div>
+    <div class="resource-card">
+      <div class="resource-icon" style="background: rgba(34,211,238,0.15);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M12 3l6 9-6 9-6-9z"/></svg>
+      </div>
+      <div class="resource-meta">
+        <div class="resource-name" style="color:#22D3EE;">Cristal</div>
+        <div class="resource-rate">Production : +1 180/h · Capacité 80 000</div>
+        <div class="resource-bar"><div style="width: 23%; background: #22D3EE; box-shadow: 0 0 6px #22D3EE;"></div></div>
+      </div>
+      <div class="resource-value">18 420 / 80 000</div>
+    </div>
+    <div class="resource-card">
+      <div class="resource-icon" style="background: rgba(251,191,36,0.15);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"><path d="M13 2L3 14h7v8l10-12h-7V2z"/></svg>
+      </div>
+      <div class="resource-meta">
+        <div class="resource-name" style="color:#FBBF24;">Énergie</div>
+        <div class="resource-rate">Production : +512/h · Capacité 12 000</div>
+        <div class="resource-bar"><div style="width: 57%; background: #FBBF24;"></div></div>
+      </div>
+      <div class="resource-value">6 840 / 12 000</div>
+    </div>
+  </div>
+
+  <div class="block-title">CARDS « EN COURS » <span class="label">— Construction & recherche avec timer</span></div>
+  <div class="grid-2">
+    <div class="timer-card">
+      <div class="timer-top">
+        <div class="timer-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M4 20h16M6 20V10l6-4 6 4v10"/></svg>
+          Mine de métal · Niv. 4 → 5
+        </div>
+        <div class="timer-countdown">00:42:18</div>
+      </div>
+      <div class="timer-bar"><div style="width: 64%;"></div></div>
+    </div>
+    <div class="timer-card">
+      <div class="timer-top">
+        <div class="timer-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m10 0h6"/></svg>
+          Métallurgie avancée · Niv. 2 → 3
+        </div>
+        <div class="timer-countdown">03:14:02</div>
+      </div>
+      <div class="timer-bar"><div style="width: 22%;"></div></div>
+    </div>
+  </div>
+
+  <div class="block-title">TOASTS <span class="label">— Notifications contextuelles</span></div>
+  <div class="stack">
+    <div class="toast toast-success"><span class="dot"></span><div><strong style="font-weight:600; color:var(--slate-100);">Construction terminée.</strong> Mine de métal promue au niveau 5.</div></div>
+    <div class="toast toast-warning"><span class="dot"></span><div><strong style="font-weight:600; color:var(--slate-100);">Stockage presque plein.</strong> Envisage d'augmenter la capacité de ton entrepôt.</div></div>
+    <div class="toast toast-error"><span class="dot"></span><div><strong style="font-weight:600; color:var(--slate-100);">Ressources insuffisantes.</strong> Il manque 1 200 cristal pour lancer cette recherche.</div></div>
+    <div class="toast toast-info"><span class="dot"></span><div><strong style="font-weight:600; color:var(--slate-100);">Nouvelle recherche disponible.</strong> Fusion nucléaire est débloquée à partir de Métallurgie 3.</div></div>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 09 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGE 10 — ACCESSIBILITÉ                                   -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Charte Graphique</div><div class="page-meta-num">10</div></div>
+  </div>
+
+  <span class="section-kicker">08 — ACCESSIBILITÉ</span>
+  <h1 class="section-title">Accessibilité</h1>
+  <p class="section-subtitle">Conformité RGAA 4.1 et WCAG 2.1 niveau AA</p>
+
+  <div class="block-title">RATIOS DE CONTRASTE VALIDÉS <span class="label">— WCAG AA (≥ 4.5:1 texte, ≥ 3:1 UI)</span></div>
+  <div class="grid-2">
+    <div class="contrast-card" style="background:var(--abyss-900); color:var(--slate-100);">
+      <div>
+        <div>Texte / Fond Abyss</div>
+        <div class="contrast-meta">#F1F5F9 sur #060B1A</div>
+      </div>
+      <div class="contrast-ratio">16.2:1</div>
+    </div>
+    <div class="contrast-card" style="background:var(--abyss-900); color:var(--cyan-400);">
+      <div>
+        <div>Cyan / Fond Abyss</div>
+        <div class="contrast-meta">#22D3EE sur #060B1A</div>
+      </div>
+      <div class="contrast-ratio">11.1:1</div>
+    </div>
+    <div class="contrast-card" style="background:var(--grad-primary); color:white;">
+      <div>
+        <div>Texte / Bouton Steel</div>
+        <div class="contrast-meta">#FFFFFF sur gradient Steel</div>
+      </div>
+      <div class="contrast-ratio">6.4:1</div>
+    </div>
+    <div class="contrast-card" style="background:var(--abyss-900); color:var(--slate-400);">
+      <div>
+        <div>Texte secondaire</div>
+        <div class="contrast-meta">#8FA3C2 sur #060B1A</div>
+      </div>
+      <div class="contrast-ratio">7.8:1</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 14px;">
+    <div class="cmp-card">
+      <div class="cmp-card-title">États de focus</div>
+      <div style="padding: 12px 0 6px;">
+        <span class="focus-demo">Focus visible</span>
+      </div>
+      <ul class="a11y-check-list" style="margin-top: 8px;">
+        <li>Outline 2px minimum, couleur #22D3EE</li>
+        <li>Offset 2px + glow cyan (0 0 0 4px rgba(34,211,238,0.2))</li>
+        <li>Jamais supprimé (<code style="font-family:var(--font-mono); color:var(--cyan-400);">outline: none</code> interdit)</li>
+      </ul>
+    </div>
+    <div class="cmp-card">
+      <div class="cmp-card-title">Navigation clavier</div>
+      <ul class="a11y-check-list">
+        <li>Tous les éléments interactifs accessibles</li>
+        <li>Ordre de tabulation logique</li>
+        <li>Liens d'évitement (skip links)</li>
+        <li>Pas de piège clavier</li>
+      </ul>
+    </div>
+    <div class="cmp-card">
+      <div class="cmp-card-title">ARIA &amp; sémantique</div>
+      <ul class="a11y-check-list">
+        <li>Régions ARIA (main, nav, aside, contentinfo)</li>
+        <li>Hiérarchie des titres h1 → h6 respectée</li>
+        <li>Étiquettes et alternatives textuelles</li>
+        <li>Rôles ARIA pour composants custom</li>
+      </ul>
+    </div>
+    <div class="cmp-card">
+      <div class="cmp-card-title">Tailles minimales</div>
+      <ul class="a11y-check-list">
+        <li>Texte : 14px min (12px en secondaire autorisé)</li>
+        <li>Zone cliquable tactile : 44 × 44px</li>
+        <li>Icônes interactives : 24px min</li>
+        <li>Interligne : 1.5 en corps de texte</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="method-box">
+    <strong>Méthodologie :</strong> Ratios de contraste mesurés avec WebAIM Contrast Checker. WCAG 2.1 AA exige ≥ 4.5:1 pour le texte normal, ≥ 3:1 pour le texte large (18pt+) et les éléments UI.
+  </div>
+  <div class="method-box" style="margin-top: 8px;">
+    <strong>RGAA 4.1 :</strong> Référentiel Général d'Amélioration de l'Accessibilité, obligatoire pour les services publics français. Documentation complète sur <span style="color:var(--cyan-400);">accessibilite.numerique.gouv.fr</span>
+  </div>
+
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 10 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGES 11-13 — WIREFRAMES DESKTOP                          -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Wireframe Desktop</div><div class="page-meta-num">11</div></div>
+  </div>
+  <span class="section-kicker">09 — WIREFRAMES</span>
+  <div class="maquette-section-title"><h1 class="section-title">Wireframe Desktop — Accueil</h1><span class="tag">1440 × 900</span></div>
+  <p class="section-subtitle">Landing publique · pitch studio + jeu + 3 cards fonctionnalités + CTA</p>
+  <div class="maquette-frame">
+    <img src="assets/wf-accueil-desktop.png" alt="Wireframe desktop Accueil" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Structure :</strong> Header persistant avec menu + CTA auth. Hero avec kicker studio, H1 manuscrite, double CTA (S'inscrire primaire, Voir la bande-annonce secondaire) et screenshot jeu. Section fonctionnalités en grid 3 colonnes. Bande de rappel CTA avant le footer.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 11 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Wireframe Desktop</div><div class="page-meta-num">12</div></div>
+  </div>
+  <span class="section-kicker">09 — WIREFRAMES</span>
+  <div class="maquette-section-title"><h1 class="section-title">Wireframe Desktop — Tableau de bord</h1><span class="tag">1440 × 900</span></div>
+  <p class="section-subtitle">Vue d'ensemble planète : 3 ressources, actions en cours, raccourcis</p>
+  <div class="maquette-frame">
+    <img src="assets/wf-dashboard-desktop.png" alt="Wireframe desktop Tableau de bord" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Structure :</strong> Sidebar gauche avec navigation (Tableau de bord, Bâtiments, Recherches, Classement). Header planète avec nom éditable et coordonnées. Grid 3 colonnes pour ressources (Métal, Cristal, Énergie) avec production/h, niveau et jauge de remplissage. Deux cards « En cours » avec timers de construction et recherche. Bande raccourcis bas.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 12 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Wireframe Desktop</div><div class="page-meta-num">13</div></div>
+  </div>
+  <span class="section-kicker">09 — WIREFRAMES</span>
+  <div class="maquette-section-title"><h1 class="section-title">Wireframe Desktop — Bâtiments</h1><span class="tag">1440 × 900</span></div>
+  <p class="section-subtitle">Liste des 5 bâtiments avec améliorations et états</p>
+  <div class="maquette-frame">
+    <img src="assets/wf-batiments-desktop.png" alt="Wireframe desktop Bâtiments" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Structure :</strong> Top-bar des ressources toujours visible. Liste verticale des 5 bâtiments (Mine de métal, Extracteur de cristal, Centrale énergétique, Entrepôt, Silo énergétique). Chaque ligne : icône, nom + niveau, description, production actuelle / après amélioration, coût détaillé, durée, bouton « Améliorer » avec états (default, disabled « Ressources insuffisantes », disabled « En cours »).
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 13 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGES 14-16 — WIREFRAMES MOBILE                           -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Wireframe Mobile</div><div class="page-meta-num">14</div></div>
+  </div>
+  <span class="section-kicker">10 — WIREFRAMES</span>
+  <div class="maquette-section-title"><h1 class="section-title">Wireframe Mobile — Accueil</h1><span class="tag">375 × 980</span></div>
+  <p class="section-subtitle">Landing publique adaptée mobile</p>
+  <div class="maquette-frame mobile">
+    <img src="assets/wf-accueil-mobile.png" alt="Wireframe mobile Accueil" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Adaptations :</strong> Hero compact avec CTA pleine largeur. Menu principal en drawer (icône hamburger). Cards fonctionnalités empilées verticalement. Touch targets ≥ 44×44px. Typographie réduite mais contraste maintenu.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 14 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Wireframe Mobile</div><div class="page-meta-num">15</div></div>
+  </div>
+  <span class="section-kicker">10 — WIREFRAMES</span>
+  <div class="maquette-section-title"><h1 class="section-title">Wireframe Mobile — Tableau de bord</h1><span class="tag">375 × 900</span></div>
+  <p class="section-subtitle">Dashboard planète sur smartphone</p>
+  <div class="maquette-frame mobile">
+    <img src="assets/wf-dashboard-mobile.png" alt="Wireframe mobile Tableau de bord" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Adaptations :</strong> Bandeau ressources condensé en top-bar (3 colonnes). Nom de planète puis cards ressources détaillées empilées. Cards « En cours » compactes. Navigation principale en bottom navigation bar fixe (5 items : Board, Bât, Rech, Rang, Menu).
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 15 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Wireframe Mobile</div><div class="page-meta-num">16</div></div>
+  </div>
+  <span class="section-kicker">10 — WIREFRAMES</span>
+  <div class="maquette-section-title"><h1 class="section-title">Wireframe Mobile — Bâtiments</h1><span class="tag">375 × 940</span></div>
+  <p class="section-subtitle">Liste des bâtiments adaptée au scroll tactile</p>
+  <div class="maquette-frame mobile">
+    <img src="assets/wf-batiments-mobile.png" alt="Wireframe mobile Bâtiments" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Adaptations :</strong> Top-bar ressources conservée. Cards bâtiments verticales avec toutes les infos empilées (niveau, production, coût, durée) et bouton « Améliorer » pleine largeur. Badge « EN COURS » et état « Ressources insuffisantes » clairement visibles.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 16 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGES 17-19 — MOCKUPS DESKTOP                             -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Mockup Desktop</div><div class="page-meta-num">17</div></div>
+  </div>
+  <span class="section-kicker">11 — MOCKUPS HAUTE FIDÉLITÉ</span>
+  <div class="maquette-section-title"><h1 class="section-title">Mockup Desktop — Accueil</h1><span class="tag">1440 × 900</span></div>
+  <p class="section-subtitle">Landing publique haute fidélité</p>
+  <div class="maquette-frame mockup">
+    <img src="assets/mk-accueil-desktop.png" alt="Mockup desktop Accueil" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Design :</strong> Thème Abyss (#030712) avec nebula gradient radial en fond. Accents cyan (#22D3EE) pour les chiffres clés. H1 en Exo 2 800 avec mot-clé « galaxie » en dégradé Steel→Cyan. Double CTA avec glow Steel sur primary. Stats bar (commandants, galaxies, saison) avec icônes et compteurs mono.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 17 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Mockup Desktop</div><div class="page-meta-num">18</div></div>
+  </div>
+  <span class="section-kicker">11 — MOCKUPS HAUTE FIDÉLITÉ</span>
+  <div class="maquette-section-title"><h1 class="section-title">Mockup Desktop — Tableau de bord</h1><span class="tag">1440 × 900</span></div>
+  <p class="section-subtitle">Vue d'ensemble planète en haute fidélité</p>
+  <div class="maquette-frame mockup">
+    <img src="assets/mk-dashboard-desktop.png" alt="Mockup desktop Tableau de bord" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Design :</strong> Top-bar avec pills ressources (icône + valeur + production/h). Sidebar navigation avec item actif souligné en cyan. Grid 3 cards ressources avec jauges circulaires (28 / 23 / 57%). Cards « Actions en cours » avec timer mono et progress bar Steel. Card « Empire » avec stats clés (niveau, score, classement, alliance). Bottom CTA bar avec 3 actions principales.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 18 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Mockup Desktop</div><div class="page-meta-num">19</div></div>
+  </div>
+  <span class="section-kicker">11 — MOCKUPS HAUTE FIDÉLITÉ</span>
+  <div class="maquette-section-title"><h1 class="section-title">Mockup Desktop — Bâtiments</h1><span class="tag">1440 × 900</span></div>
+  <p class="section-subtitle">Gestion des bâtiments avec panneau détail latéral</p>
+  <div class="maquette-frame mockup">
+    <img src="assets/mk-batiments-desktop.png" alt="Mockup desktop Bâtiments" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Design :</strong> Liste des 5 bâtiments en cards Navy avec icône custom + titre Exo 2 + description. Chips « NIV. X » en haut à droite. Panneau détail flottant à droite montrant le bâtiment sélectionné avec : production actuelle vs après amélioration (surbrillance cyan), coût détaillé avec pastilles Métal / Cristal / Énergie, durée, CTA principal « Améliorer au niveau X » en gradient Steel.
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 19 / 21</span></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- PAGES 20-21 — MOCKUPS MOBILE                              -->
+<!-- ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Mockup Mobile</div><div class="page-meta-num">20</div></div>
+  </div>
+  <span class="section-kicker">11 — MOCKUPS HAUTE FIDÉLITÉ</span>
+  <div class="maquette-section-title"><h1 class="section-title">Mockup Mobile — Accueil</h1><span class="tag">375 × 812</span></div>
+  <p class="section-subtitle">Landing publique haute fidélité sur smartphone</p>
+  <div class="maquette-frame mobile mockup">
+    <img src="assets/mk-accueil-mobile.png" alt="Mockup mobile Accueil" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Design :</strong> Identité visuelle préservée. Hero adapté mobile avec H1 sur 2 lignes (« Conquiers la » / « galaxie » en cyan). CTA primaire pleine largeur. Cards fonctionnalités compactes avec icône + titre + accroche courte. Stats bar « 14 882 joueurs · 37 galaxies ».
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 20 / 21</span></div>
+</section>
+
+<section class="page">
+  <div class="page-header">
+    <div class="brand">
+      <div class="brand-logo"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L14.5 10 L22 11 L16.5 16 L18 23 L12 19 L6 23 L7.5 16 L2 11 L9.5 10 Z" fill="white"/></svg></div>
+      <div class="brand-text"><div class="brand-name">Stellar Imperiums</div><div class="brand-sub">Charte graphique v1.0</div></div>
+    </div>
+    <div class="page-meta"><div class="page-meta-label">Mockup Mobile</div><div class="page-meta-num">21</div></div>
+  </div>
+  <span class="section-kicker">11 — MOCKUPS HAUTE FIDÉLITÉ</span>
+  <div class="maquette-section-title"><h1 class="section-title">Mockup Mobile — Tableau de bord</h1><span class="tag">375 × 812</span></div>
+  <p class="section-subtitle">Dashboard planète haute fidélité sur smartphone</p>
+  <div class="maquette-frame mobile mockup">
+    <img src="assets/mk-dashboard-mobile.png" alt="Mockup mobile Tableau de bord" />
+  </div>
+  <div class="maquette-caption">
+    <strong>Design :</strong> Top-bar réduite avec logo + notifications + avatar. Bandeau ressources compact (3 chiffres clés). Header planète avec coordonnées et salutation. Card « Actions en cours » avec 2 timers. Card « Empire » avec stats résumées. CTA principal « Gérer bâtiments » pleine largeur. Bottom navigation bar avec 4 items (Dashboard · Bâtiments · Recherches · Rang).
+  </div>
+  <div class="page-footer"><span>© 2026 Synarion Entertainments</span><span>Page 21 / 21 — Fin de la charte</span></div>
+</section>
+
+</body>
+</html>
