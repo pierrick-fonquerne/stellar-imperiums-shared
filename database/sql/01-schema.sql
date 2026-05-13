@@ -12,7 +12,7 @@ CREATE TABLE batiment_definition (
     code                    VARCHAR(50)    NOT NULL UNIQUE,
     nom                     VARCHAR(100)   NOT NULL,
     description             TEXT           NOT NULL,
-    type_production         VARCHAR(20)    NOT NULL,
+    type_production         VARCHAR(30)    NOT NULL,
     base_cout_metal         INTEGER        NOT NULL,
     base_cout_cristal       INTEGER        NOT NULL,
     base_cout_energie       INTEGER        NOT NULL,
